@@ -3,7 +3,7 @@ import React from 'react';
 const Tests : React.FC = () => {
     return (
         <div>
-           Tests
+           <h1>Tests</h1>
         </div>
     );
 };

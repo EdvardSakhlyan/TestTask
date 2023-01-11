@@ -4,6 +4,7 @@ import Dashboard from "../Dashboard";
 import Tests from "../Tests";
 import Team from "../Team";
 import "./style.scss"
+import NotFound from "../NotFound";
 
 const Main : React.FC = () => {
     return (
@@ -12,6 +13,7 @@ const Main : React.FC = () => {
                 <Route path="/" element={<Dashboard/>}/>
                 <Route path="/tests" element={<Tests/>}/>
                 <Route path="/team" element={<Team/>}/>
+                <Route path="*" element={<NotFound/>}/>
             </Routes>
         </div>
     );
