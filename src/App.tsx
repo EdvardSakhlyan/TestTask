@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.scss';
-import SideBar from "./components/SideBar";
-import Main from "./components/Main";
+import {RouterProvider} from "react-router-dom";
+import router from "./router";
 
 function App() {
     return (
         <div className="app">
-            <SideBar/>
-            <Main/>
+            <RouterProvider router={router}/>
         </div>
     );
 }

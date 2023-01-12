@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from "../Header";
 
 const Team : React.FC = () => {
     return (
         <div>
-            <h1>Team</h1>
+            <Header heading="Team"/>
         </div>
     );
 };

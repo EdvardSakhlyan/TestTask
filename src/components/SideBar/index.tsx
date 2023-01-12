@@ -16,7 +16,7 @@ const SideBar : React.FC = () => {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/" className={isActiveFn}>
+                        <NavLink to="/dashboard" className={isActiveFn}>
                             <RiDashboardFill/>
                         </NavLink>
                     </li>

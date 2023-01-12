@@ -1,0 +1,12 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.not-found h1 {
+  color: #000000;
+  font-size: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */

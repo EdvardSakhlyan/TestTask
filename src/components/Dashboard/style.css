@@ -1,14 +1,3 @@
-.dashboard header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.dashboard header ul {
-  display: flex;
-}
-.dashboard header ul li {
-  margin: 0 1rem;
-  font-weight: 700;
-}
+
 
 /*# sourceMappingURL=style.css.map */
