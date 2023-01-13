@@ -1,5 +1,92 @@
 .content-item {
   border-radius: 20px;
-  background: yellow;
+  //background: #6fa6b7;
   padding: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+
+  @media (max-width:  768px) {
+    height: 35vw;
+
+  }
+
+
+
+  .content-item-header {
+    display: flex;
+    justify-content: space-between;
+
+
+    @media (max-width:  768px) {
+      h3 {
+        font-size: 16px;
+      }
+
+      h4 {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width:  480px) {
+      h3 {
+        font-size: 14px;
+      }
+
+      h4 {
+        font-size: 12px;
+      }
+    }
+
+
+  }
+
+  .content-item-body {
+    .icon-box {
+      width: 85px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 16px;
+
+
+
+      @media (max-width:  768px) {
+        width: 55px;
+        height: 45px;
+
+        svg {
+          width: 15px;
+        }
+      }
+
+      @media (max-width:  480px) {
+        width: 35px;
+        height: 25px;
+
+        svg {
+          width: 10px;
+        }
+      }
+    }
+  }
 }
+
+
+.content-item:nth-child(odd) {
+  background-image: url("../../images/89c822bfe458b2c884848f4b7e489a37 1.png");
+}
+
+.content-item:nth-child(even) {
+  background-image: url("../../images/Why-you-should-choose-custom-modular-structures-for-permanent-and-portable-projects 1.png");
+}
+
+

@@ -2,6 +2,24 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 4rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 900px) {
+  header {
+    display: block;
+  }
+  header ul {
+    margin-top: 1rem;
+  }
+  header ul li:first-child {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 0 2rem;
+  }
 }
 header ul {
   display: flex;
@@ -9,6 +27,26 @@ header ul {
 header ul li {
   margin: 0 1rem;
   font-weight: 700;
+}
+header ul li a {
+  color: #CBB1A2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header ul li a::after {
+  content: "";
+  display: block;
+  transition: all ease 300ms;
+  width: 50%;
+  height: 2px;
+  margin-top: 2px;
+}
+header ul li .activeLink::after {
+  background: #6749A5;
+}
+header ul li .activeLink {
+  color: #6749A5;
 }
 
 /*# sourceMappingURL=style.css.map */

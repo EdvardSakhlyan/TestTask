@@ -1,8 +1,13 @@
 import React from 'react';
 import "./style.scss"
+import Play from "../../images/play";
 
 export interface Item {
-    id: number
+    id: number,
+    category: string,
+    heading: string,
+    lessons: number,
+    minute: number
 }
 
 interface ContentItemProps {
@@ -15,15 +20,17 @@ const ContentItem : React.FC<ContentItemProps> = ({item}) => {
         <div className="content-item">
             <div className="content-item-header">
                 <div>
-                    <h2>Some text</h2>
-                    <h3>Some text</h3>
+                    <h3>{item.heading}</h3>
+                    <h4>{item.lessons} lessons</h4>
                 </div>
                 <div>
-                    <h2>Some text</h2>
+                    <h3>{item.minute} min</h3>
                 </div>
             </div>
             <div className="content-item-body">
-                <div>icon</div>
+                <div className="icon-box">
+                    <Play/>
+                </div>
             </div>
         </div>
     );

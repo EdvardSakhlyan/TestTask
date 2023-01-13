@@ -3,30 +3,32 @@ import {NavLink} from "react-router-dom";
 import { RiDashboardFill } from 'react-icons/ri';
 import { HiClipboardList } from 'react-icons/hi';
 import { RiTeamFill } from 'react-icons/ri';
+import {useAppSelector} from "../../app/hooks";
 import "./style.scss"
-
 
 
 const SideBar : React.FC = () => {
 
-    const isActiveFn = (arg : any) =>  arg.isActive ?  undefined : "activeLink"
+    const isActiveFn = (arg : any) =>  arg.isActive ? "activeLink" : undefined
+
+    const {contentReducer : {category}} = useAppSelector(state => state)
 
     return (
         <div className="side-bar">
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/dashboard" className={isActiveFn}>
+                        <NavLink to={`/dashboard/${category}`} className={isActiveFn}>
                             <RiDashboardFill/>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/tests" className={isActiveFn}>
+                        <NavLink to={`/tests/${category}`} className={isActiveFn}>
                             <HiClipboardList/>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/team" className={isActiveFn}>
+                        <NavLink to={`/team/${category}`} className={isActiveFn}>
                             <RiTeamFill/>
                         </NavLink>
                     </li>

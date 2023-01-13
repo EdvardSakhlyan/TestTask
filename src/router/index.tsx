@@ -31,11 +31,39 @@ const routes = [
                 },
                 {
                     path: "tests",
-                    element: <Tests />,
+                    element: <Tests/>,
+                    children: [
+                        {
+                            path: "popular",
+                            element: <Content type="popular"/>
+                        },
+                        {
+                            path: "favorite",
+                            element: <Content type="favorite"/>
+                        },
+                        {
+                            path: "new",
+                            element: <Content type="new"/>
+                        }
+                    ]
                 },
                 {
                     element: <Team />,
                     path: "team",
+                    children: [
+                        {
+                            path: "popular",
+                            element: <Content type="popular"/>
+                        },
+                        {
+                            path: "favorite",
+                            element: <Content type="favorite"/>
+                        },
+                        {
+                            path: "new",
+                            element: <Content type="new"/>
+                        }
+                    ]
                 },
                 {
                     element: <NotFound />,

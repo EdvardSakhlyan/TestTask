@@ -7,6 +7,14 @@
   background: #fbe4d4;
   border-radius: 20px 0 0 20px;
 
+  nav {
+    width: 100%;
+  }
+
+  @media (max-width:  768px) {
+    width: 15vw;
+  }
+
   ul {
     padding-top: 4rem;
 
@@ -14,9 +22,46 @@
       margin: 1rem 0;
       a {
         font-size: 35px;
-      }
-      .activeLink {
         color: #d9ae9d;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      a:before {
+        content: "";
+        height: inherit;
+        width: 2px;
+        display: block;
+        transition: all ease 300ms;
+      }
+
+      a:after {
+        content: "";
+        height: inherit;
+        width: 2px;
+        display: block;
+
+      }
+      @media (min-width: 900px) {
+        .activeLink:before {
+          content: "";
+          height: inherit;
+          width: 2px;
+          transition: all ease 300ms;
+          background: #8964D7;
+          display: block;
+        }
+
+        .activeLink:after {
+          content: "";
+          height: inherit;
+          width: 2px;
+          display: block;
+        }
+      }
+
+      .activeLink {
+        color: #8964D7;
       }
     }
   }
