@@ -16,11 +16,18 @@ const Content : React.FC<ContentProps> = ({type}) => {
 
     useEffect(() => {
         dispatch(getFilteredContent(type))
-    },[type])
+    },[type , dispatch])
 
     return (
         <div className="content">
-            {content.map(item => <ContentItem item={item} key={item.id}/>)}
+            {content.map(({heading, lessons, minute, id}) => {
+                return <ContentItem
+                    heading={heading}
+                    lessons={lessons}
+                    minute={minute}
+                    key={id}
+                />
+            })}
         </div>
     );
 };

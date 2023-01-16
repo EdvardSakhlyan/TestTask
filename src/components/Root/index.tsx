@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from "../SideBar";
 import Main from "../Main";
 
-const Root = () => {
+const Root : React.FC = ()  => {
     return (
         <>
             <SideBar/>

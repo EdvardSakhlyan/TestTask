@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from "../Header";
+import "./style.scss"
 
 const Team : React.FC = () => {
     return (
-        <div>
+        <div className="team">
             <Header heading="Team"/>
         </div>
     );

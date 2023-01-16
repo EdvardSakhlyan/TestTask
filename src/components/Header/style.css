@@ -3,11 +3,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 4rem;
-  margin-bottom: 2rem;
+  height: 20%;
 }
 @media (max-width: 900px) {
   header {
-    display: block;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem 4rem;
   }
   header ul {
     margin-top: 1rem;
@@ -18,7 +20,13 @@ header {
 }
 @media (max-width: 768px) {
   header {
-    padding: 0 2rem;
+    padding: 2rem 2rem;
+  }
+  header h1 {
+    font-size: 25px;
+  }
+  header ul li {
+    font-size: 14px;
   }
 }
 header ul {
